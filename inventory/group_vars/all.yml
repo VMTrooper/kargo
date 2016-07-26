@@ -108,6 +108,10 @@ dns_server: "{{ kube_service_addresses|ipaddr('net')|ipaddr(2)|ipaddr('address')
 # When openstack is used make sure to source in the openstack credentials
 # like you would do when using nova-client before starting the playbook.
 # cloud_provider:
+cloud_provider: openstack
+openstack_lb_ver: v2
+openstack_subnet_id: b70c068e-696c-4f46-9add-984418a14ba1
+openstack_floating_ip_id: 207db0d7-58ee-490f-82e8-b4b5c10a5dcd
 
 # For multi masters architecture:
 # kube-proxy doesn't support multiple apiservers for the time being so you'll need to configure your own loadbalancer

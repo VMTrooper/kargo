@@ -4,3 +4,9 @@ username={{ openstack_username }}
 password={{ openstack_password }}
 region={{ openstack_region }}
 tenant-id={{ openstack_tenant_id }}
+{% if openstack_lb_ver is defined %}
+[LoadBalancer]
+lb-version={{ openstack_lb_ver }}
+subnet-id={{ openstack_subnet_id }}
+floating-network-id={{ openstack_floating_ip_id }}
+{% endif %}
